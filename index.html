@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kit Machinist X99-RS9</title>
+    <meta name="description" content="X99-RS9">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- External CSS -->
+    <style>
+
+        body {
+            overflow: hidden;
+  min-height: 500vh; /* или другое значение, достаточное для отображения всего контента */
+}
+        .navbar.fixed-top {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+    </style>
+    </style>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/lightcase/lightcase.css">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="Alex">
+
+    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+</head>
+<body data-spy="scroll" data-target="#navbar" class="static-layout">
+    <nav id="header-navbar" class="navbar navbar-expand-lg py-4 fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-white" href="/">
+                <h3 class="font-weight-bolder mb-0"></h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header" aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="lnr lnr-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-nav-header">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#drivers">Drivers and Software</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Technical Specification</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="side-nav" class="sidenav">
+	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
+	
+	<div class="sidenav-content">
+	</div>
+</div><div id="side-search" class="sidenav">
+	<a href="javascript:void(0)" id="side-search-close">&times;</a>
+	<div class="sidenav-content">
+		<form action="">
+
+			<div class="input-group md-form form-sm form-2 pl-0">
+			  <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
+			  <div class="input-group-append">
+			    <button class="input-group-text red lighten-3" id="basic-text1">
+			    	<span class="lnr lnr-magnifier"></span>
+			    </button>
+			  </div>
+			</div>
+
+		</form>
+	</div>
+	
+</div>	<div class="jumbotron d-flex align-items-center">
+    <style>
+        .animated-image {
+        animation: moveUpDown 15s infinite;
+        }
+    
+        @keyframes moveUpDown {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+    
+    <div class="container text-center">
+        <h2 id="rainbow-text">
+          <span>G</span><span>a</span><span>m</span><span>i</span><span>n</span><span>g</span>
+          <span>C</span><span>h</span><span>a</span><span>r</span>
+          <span>X</span><span>1</span>
+          <img src="Gaming Char X1.png" width="800" height="800" alt="Animated Image" class="animated-image">
+        </h2>
+      </div>
+      
+      <style>
+        @font-face {
+        font-family: 'Qore';
+        src: url('Qore.otf') format('opentype');
+    }
+    @font-face {
+        font-family: 'MotocarsDemo';
+        src: url('MotocarsDemo.ttf') format('truetype');
+    }
+
+    #DRV {
+        font-family: 'MotocarsDemo', sans-serif;
+        font-size: 78px;
+    }
+    #rainbow-text {
+        font-family: 'Qore', sans-serif;
+        font-size: 42px;
+    }
+      @keyframes rainbow {
+        0% { color: red; }
+        14% { color: orange; }
+        28% { color: yellow; }
+        42% { color: lime; }
+        57% { color: blue; }
+        71% { color: indigo; }
+        85% { color: violet; }
+        100% { color: red; }
+      }
+      
+      #rainbow-text span {
+        animation-name: rainbow;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      </style>
+      
+      <script>
+      // Функция для генерации случайного числа в заданном диапазоне
+      function getRandomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      
+      // Функция для генерации случайного цвета
+      function getRandomColor() {
+        var r = getRandomNumber(0, 255);
+        var g = getRandomNumber(0, 255);
+        var b = getRandomNumber(0, 255);
+        return `rgb(${r}, ${g}, ${b})`;
+      }
+      
+      // Функция для изменения цвета каждой буквы
+      function changeLetterColors() {
+        var letterElements = document.querySelectorAll('#rainbow-text span');
+        letterElements.forEach(function(letter) {
+          letter.style.color = getRandomColor();
+        });
+      }
+      
+      // Установка интервала для изменения цвета букв
+      setInterval(changeLetterColors, 1000000); // Изменяйте значение интервала по своему усмотрению
+      </script>
+      
+  <div class="rectangle-1"></div>
+  <div class="rectangle-2"></div>
+  <div class="rectangle-transparent-1"></div>
+  <div class="rectangle-transparent-2"></div>
+  <div class="circle-1"></div>
+  <div class="circle-2"></div>
+  <div class="circle-3"></div>
+  <div class="triangle triangle-1">
+  	<img src="img/obj_triangle.png" alt="">
+  </div>
+  <div class="triangle triangle-2">
+  	<img src="img/obj_triangle.png" alt="">
+  </div>
+  <div class="triangle triangle-3">
+  	<img src="img/obj_triangle.png" alt="">
+  </div>
+  <div class="triangle triangle-4">
+  	<img src="img/obj_triangle.png" alt="">
+  </div>
+</div>	<!-- Features Section-->
+<section id="features" class="bg-white">
+    <div class="container">
+        <div class="section-content">
+            <!-- Section Title -->
+            <div class="title-wrap mb-5" data-aos="fade-up">
+                <h2 class="section-title">
+                <a href="https://gettemplates.co" target="_blank"></a>
+                </h2>
+                <p class="section-sub-title"><br></p>
+            </div>
+            <!-- End of Section Title -->
+            <div class="row">
+                <!-- Features Holder-->
+                <div class="col-md-10 offset-md-1 features-holder">
+                    <div class="row">
+                        <!-- Features Item -->
+                        <div class="col-md-4 col-sm-12 text-center mt-4">
+                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                                <div class="my-4">
+                                    <img src="Motherboard ico.png" alt="Image" class="picture" style="width: 60px;" style="height: 60px;">
+                                </div>
+                                <h4>Machinist X99-RS9</h4>
+                                <p>Power unleashed on a single motherboard!</p>
+                                <img src="Motherboard.png" alt="Image" class="picture" style="width: 200px;" style="height: 200px;">
+                            </div>
+                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                                <div class="my-4">
+                                    <img src="CPU ico.png" alt="Image" class="picture" style="width: 60px;" style="height: 60px;">
+                                </div>
+                                <h4>Intel® Xeon® E5 2670 v3</h4>
+                                <p>3.1 Ghz - 12 Cores/24 Theards</p>
+                                <img src="Xeon 2670V3.png" alt="Image" class="picture" style="width: 150px;" style="height: 150px;">
+                            </div>
+                        </div>
+                        <!-- End of Feature Item -->
+                        <!-- Features Item -->
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                                <div class="my-4">
+                                    <img src="RAM ico.png" alt="Image" class="picture" style="width: 60px;" style="height: 60px;">
+                                </div>
+                                <h4>MACHINIST DDR4 RAM</h4>
+                                <p>32 gigabytes of gaming RAM
+                                    2666Mhz-16GB * 2PCS</p>
+                                <img src="DDR4 RAM.png" alt="Image" class="picture" style="width: 90px;" style="height: 90px;">
+                            </div>
+                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                                <div class="my-4">
+                                    <img src="PWU ico.png" alt="Image" class="picture" style="width: 60px;" style="height: 60px;">
+                                </div>
+                                <h4>Vinga 500W-APFC</h4>
+                                <p>Powerful and reliable 500 Watt power supply unit</p>
+                                <img src="PWU.png" alt="Image" class="picture" style="width: 170px;" style="height: 170px;">
+                            </div>
+                        </div>
+                        <!-- End of Feature Item -->
+                        <!-- Features Item -->
+                        <div class="col-md-4 col-sm-12 text-center mt-5">
+                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                                <div class="my-4">
+                                    <img src="SSD Ico.png" alt="Image" class="picture" style="width: 60px;" style="height: 60px;">
+                                </div>
+                                <h4>SSD NVME 512GB</h4>
+                                <p>High-speed NVMe SSD storage with 2100MB/s read and 1800MB/s write speeds.</p>
+                                <img src="SSD.png" alt="Image" class="picture" style="width: 400px;" style="height: 400px;">
+                            </div>
+                            <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
+                                <div class="my-5">
+                                    <img src="RX6600M Ico.png" alt="Image" class="picture" style="width: 60px;" style="height: 60px;">
+                                </div>
+                                <h4>Graphics card PCI-E 4.0 RX6600M</h4>
+                                <p>Gaming-grade graphics card RX6600M PCI-E 4.0 x8 (100W TDP) with 8GB GDDR6</p>
+                                <img src="RX6600M.jpg" alt="Image" class="picture" style="width: 300px;" style="height: 300px;">
+                            </div>
+                        </div>                        
+                        <!-- End of Feature Item -->
+                    </div>
+                </div>
+                <!-- End of Features Holder-->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Features Section-->	<section id="section-featurettes" class="featurettes overlay bg-fixed" style="background-image: url(img/bg.jpg);">
+
+    <div class="container">
+        <div class="section-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row align-items-center text-white">
+
+                        <div class="col-md-4 offset-md-2 col-sm-6" data-aos="fade-right">
+                            <h4 class="mb-4">Gaming performance tests</h4>
+                            <p> In this video, you will be able to watch and see for yourself that this setup is perfectly suited for all demanding tasks as well as gaming at a resolution of 1920x1080. It provides smooth FPS and fast gameplay performance.</p>
+                        </div>
+                        <!--/ .col-md-4.col-md-offset-2.col-sm-6 -->
+
+                        <div class="col-md-4 offset-md-right-2 col-sm-6" data-aos="flip-right">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/x-P-Z4K8Bow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <!--/ .col-md-4.col-md-offset-right-2.col-sm-6 -->
+
+                    </div><!--/ .featurettes-item -->
+
+                </div><!--/ .col-md-12 -->
+
+            </div><!--/ .row -->
+        </div>
+    </div><!--/ .container -->
+
+</section>	<section id="section-featurettes2" class="featurettes">
+
+    <div class="container">
+        <div class="section-content">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="flip-center">
+                    <img class="mt-4" src="Set.jpg" alt="" style="width: 600px; height: 330px;">
+                </div>
+                <div class="col-md-6" data-aos="fade-center">
+                    <h4 class="mb-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Experience Machinist X99-RS9 Kit</h4>
+                    <p>Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet.</p>
+                    <div class="progress mb-3">
+                        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">Cyberpunk 2077 80 - fps</div>
+                    </div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Overwatch 120 - fps</div>
+                    </div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">Cyberpunk 2077 80 - fps</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Overwatch 120 - fps</div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>    
+                        </div><!--/ .col-md-4.col-md-offset-2.col-sm-6 -->
+
+                    </div><!--/ .featurettes-item -->
+
+                </div><!--/ .col-md-12 -->
+
+            </div><!--/ .row -->
+        </div>
+    </div><!--/ .container -->
+
+</section>	<!-- Testimonial Section-->
+<section id="testimonial" class="section-padding bg-fixed bg-black overlay" style="background-image: url(https://images4.alphacoders.com/130/1303457.jpg);">
+    <div class="container">
+        <div class="section-content" data-aos="fade-up">
+            <div class="heading-section text-center">
+                <h2 style="font-family: DejaVu Sans Mono, monospace; font-size: 40px;">
+                    Cooling System
+                </h2>
+            </div>
+            <div class="row">
+                <!-- Testimonial -->
+                <div class="testi-content testi-carousel owl-carousel">
+                    <div class="testi-item text-center">
+                        <h4 class="testi-text" style="font-size: 36px;"><b>1STPLAYER R3-A-3R1</b><br></h4>
+                        <div class="testi-meta-inner d-flex justify-content-center align-items-center">
+                            <div class="1">
+                                <img src="COP.png" alt="" width="600" height="600">
+                            </div>
+                            <div class="testi-details">
+                                <p class="testi-author mb-0 font-weight-bolder"></p>
+                                <p class="testi-desc mb-0"></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="testi-item text-center">
+                        <h4 class="testi-text" style="font-size: 36px;"><b>R1-3PIN*3PCS</b><br></h4>
+                        <div class="testi-meta-inner d-flex justify-content-center align-items-center">
+                            <div class="2">
+                                <img src="Coolers.png" alt=""width="500" height="500">
+                            </div>
+                            <div class="testi-details">
+                                <p class="testi-author mb-0 font-weight-bolder"></p>
+                                <p class="testi-desc mb-0"></p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="testi-item text-center">
+                        <h4 class="testi-text" style="font-size: 36px;"><b>Jonsbo CR-1200E</b><br></h4>
+                        <div class="testi-meta-inner d-flex justify-content-center align-items-center">
+                            <div class="3">
+                                <img src="Cooler CR1200E.png" alt="" width="500" height="500">
+                            </div>
+                            <div class="testi-details">
+                                <p class="testi-author mb-0 font-weight-bolder"></p>
+                                <p class="testi-desc mb-0"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Testimonial -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Testimonial Section-->	<!-- Portfolio Section -->
+<section id="portfolio" class="bg-white">
+    <div class="container">
+        <div class="section-content">
+            <!-- Section Title -->
+            <div class="title-wrap">
+                <h2 class="section-title"><b>Gaming Char X1</b></h2>
+                <p class="section-sub-title">Stylish and powerful gaming PC that will let you experience the full power of FULL HD</p>
+            </div>
+            <!-- End of Section Title -->
+            <div class="row">
+                <!-- Portfolio Holder -->
+                <div class="col-md-12 portfolio-holder mt-3">
+                    <!-- Btn Filter -->
+                    <div class="filter-button-group btn-filter d-flex justify-content-center">
+                    </div>
+                    <!-- End of Btn Filter -->
+                    <!-- Portfolio Content -->
+                    <div class="grid-portfolio">
+                        <div class="grid-sizer"></div>
+                        <div class="gutter-sizer"></div>
+                        <!-- Portfolio Item -->
+                        <div class="grid-item minimalism" data-aos="fade-up">
+                            <div class="grid-item-wrapper">
+                                <img src="img/photo-1.jpg" alt="portfolio-img" class="portfolio-item">
+                                <div class="grid-info">
+                                    <div class="grid-link d-flex justify-content-center">
+                                        <a class="img-pop" data-rel="lightcase" href="img/photo-1.jpg" title="Photo-1">
+                                            <span class="lnr lnr-move"></span>
+                                        </a>
+                                        <a class="ext-link" href="https://unsplash.com/" target="_blank">
+                                            <span class="lnr lnr-link"></span>
+                                        </a>
+                                    </div>
+                                    <div class="grid-title">
+                                        <h4>Camera</h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End of Portfolio Item -->
+                        <!-- Portfolio Item -->
+                        <div class="grid-item vintage" data-aos="fade-up">
+                            <div class="grid-item-wrapper">
+                                <img src="img/photo-6.jpg" alt="portfolio-img" class="portfolio-item">
+                                <div class="grid-info">
+                                    <div class="grid-link d-flex justify-content-center">
+                                        <a class="img-pop" data-rel="lightcase" href="img/photo-6.jpg" title="Ship">
+                                            <span class="lnr lnr-move"></span>
+                                        </a>
+                                        <a class="ext-link" href="https://unsplash.com/" target="_blank">
+                                            <span class="lnr lnr-link"></span>
+                                        </a>
+                                    </div>
+                                    <div class="grid-title">
+                                        <h4>Flower</h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End of Portfolio Item -->
+                        <!-- Portfolio Item -->
+                        <div class="grid-item creative grid-item-height" data-aos="fade-up">
+                            <div class="grid-item-wrapper">
+                                <img src="img/photo-2.jpg" alt="portfolio-img" class="portfolio-item">
+                                <div class="grid-info">
+                                    <div class="grid-link d-flex justify-content-center">
+                                        <a class="img-pop" data-rel="lightcase" href="img/photo-2.jpg" title="Tracy Portrait">
+                                            <span class="lnr lnr-move"></span>
+                                        </a>
+                                        <a class="ext-link" href="https://unsplash.com/" target="_blank">
+                                            <span class="lnr lnr-link"></span>
+                                        </a>
+                                    </div>
+                                    <div class="grid-title">
+                                        <h4>Breakfast</h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End of Portfolio Item -->
+                        <!-- Portfolio Item -->
+                        <div class="grid-item creative" data-aos="fade-up">
+                            <div class="grid-item-wrapper">
+                                <img src="img/photo-7.jpg" alt="portfolio-img" class="portfolio-item">
+                                <div class="grid-info">
+                                    <div class="grid-link d-flex justify-content-center">
+                                        <a class="img-pop" data-rel="lightcase" href="img/photo-7.jpg" title="Guitar">
+                                            <span class="lnr lnr-move"></span>
+                                        </a>
+                                        <a class="ext-link" href="https://unsplash.com/" target="_blank">
+                                            <span class="lnr lnr-link"></span>
+                                        </a>
+                                    </div>
+                                    <div class="grid-title">
+                                        <h4>Chair</h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End of Portfolio Item -->
+                        <!-- Portfolio Item -->
+                        <div class="grid-item vintage" data-aos="fade-up">
+                            <div class="grid-item-wrapper">
+                                <img src="img/photo-4.jpg" alt="portfolio-img" class="portfolio-item">
+                                <div class="grid-info">
+                                    <div class="grid-link d-flex justify-content-center">
+                                        <a class="img-pop" data-rel="lightcase" href="img/photo-4.jpg" title="Bookself">
+                                            <span class="lnr lnr-move"></span>
+                                        </a>
+                                        <a class="ext-link" href="https://unsplash.com/" target="_blank">
+                                            <span class="lnr lnr-link"></span>
+                                        </a>
+                                    </div>
+                                    <div class="grid-title">
+                                        <h4>Hidden Book</h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End of Portfolio Item -->
+                        <!-- Portfolio Item -->
+                        <div class="grid-item creative" data-aos="fade-up">
+                            <div class="grid-item-wrapper">
+                                <img src="img/photo-9.jpg" alt="portfolio-img" class="portfolio-item">
+                                <div class="grid-info">
+                                    <div class="grid-link d-flex justify-content-center">
+                                        <a class="img-pop" data-rel="lightcase" href="img/photo-9.jpg" title="Guitar">
+                                            <span class="lnr lnr-move"></span>
+                                        </a>
+                                        <a class="ext-link" href="https://unsplash.com/" target="_blank">
+                                            <span class="lnr lnr-link"></span>
+                                        </a>
+                                    </div>
+                                    <div class="grid-title">
+                                        <h4>Red</h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End of Portfolio Item -->
+                    </div>
+                    <!-- End of Portfolio Content -->
+                </div>
+                <!-- End of Portfolio Holder -->
+            </div>
+        </div>
+    </div>
+</section>
+<section id="drivers" class="overlay bg-black" style="background-image: url(https://r4.wallpaperflare.com/wallpaper/441/413/205/the-game-neon-fangs-face-wallpaper-d9d0e8dd41aabd9bd6f7f80fa0d1e67d.jpg);">
+    <div class="overlay-content">
+        <div class="container">
+            <div class="section-content" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Section Title -->
+                        <div class="title-wrap mb-5">
+                            <h2 id="DRV">
+                                        <b>
+                                            <span class="rainbow-text">Drivers and Software</span>
+                                        </b>
+                                        <span>
+                                        </span>
+                                    </h2>
+                                    <style>
+                                        #drivers {
+                                          position: relative;
+                                          height: 100vh;
+                                          background-size: cover;
+                                          background-position: center;
+                                        }
+                                      
+                                        .overlay {
+                                          position: relative;
+                                          z-index: 1;
+                                        }
+                                      
+                                        .bg-black::before {
+                                          content: "";
+                                          position: absolute;
+                                          top: 0;
+                                          left: 0;
+                                          width: 100%;
+                                          height: 100%;
+                                          background-color: black;
+                                          opacity: 0.7; /* Увеличьте значение прозрачности для более сильного затемнения */
+                                        }
+                                      
+                                        .overlay-content {
+                                          position: relative;
+                                          z-index: 2;
+                                          padding: 20px;
+                                          color: white;
+                                        }
+                                      
+                                        .rainbow-text {
+                                          font-weight: bold;
+                                          animation: rainbow-animation 5s ease-in-out infinite;
+                                        }
+                                      
+                                        @keyframes rainbow-animation {
+                                          0% { text-shadow: 0 0 3px #ff0000; }
+                                          14% { text-shadow: 0 0 3px #ff7f00; }
+                                          28% { text-shadow: 0 0 3px #ffff00; }
+                                          42% { text-shadow: 0 0 3px #00ff00; }
+                                          57% { text-shadow: 0 0 3px #0000ff; }
+                                          71% { text-shadow: 0 0 3px #4b0082; }
+                                          85% { text-shadow: 0 0 3px #8b00ff; }
+                                          100% { text-shadow: 0 0 3px #ff0000; }
+                                        }
+                                      </style>
+                                    
+                            
+                                                       
+                            <h2 style="font-size: 30px;">
+                                <b>Chipset</b><span></span></h2>
+                            <h2>
+                                <h2 style="font-size: 20px;">
+                                    <a href="https://drive.google.com/uc?export=download&id=13s7D4xwr-Txrhfa6Ku0CCzwE_lSh2866" style="width: 100%; display: inline-block;">Chipset drivers (Win10 and WinServer (2019\2016\2012R2)):</a>
+                                </h2>
+                                <h2 style="font-size: 30px;">
+                                    <b>Realtek Audio Drivers</b><span></span>
+                                </h2>
+                                <h2 style="font-size: 20px;">
+                                    <a href="https://drive.google.com/uc?export=download&id=1GxOQ3FOzIkIUmMd5uSTnPhHwCTugb53y" style="width: 100%; display: inline-block;">Audio driver X64-bit (Realtek High Definition Driver V2.81 is a recommended version that works stably with most Realtek audio chips (ALC 662\883\887\888\892 and others)):</a>
+                                </h2>
+                                <h2 style="font-size: 20px;">
+                                    <a href="https://drive.google.com/uc?export=download&id=1wLjgCjf1VDUcMnuVB4l1Keyv0Jsr-3Ci" style="width: 100%; display: inline-block;">Audio driver X32-bit (Realtek High Definition Driver V2.81 is a recommended version that works stably with most Realtek audio chips (ALC 662\883\887\888\892 and others)):</a>
+                                </h2>
+                                <h2 style="font-size: 20px;">
+                                    <a href="https://drive.google.com/uc?export=download&id=1tjZNnL-j8NNwKGt2HGpoJ__mWPRW6n5H" style="width: 100%; display: inline-block;">Audio driver X64-bit (Realtek High Definition Driver V2.76. You can try if something went wrong with version 2.81 For Win7\8\10 x64.):</a>
+                                </h2>
+                                <h2 style="font-size: 30px;">
+                                    <b>Realtek Network Drivers</b><span></span>
+                                </h2>
+                                <h2 style="font-size: 20px;">
+                                    <a href="https://drive.google.com/uc?export=download&id=1Ok2qgy6dzVoEgU80NakfZYVPFaetej6c" style="width: 100%; display: inline-block;">Network drivers (Realtek FE/GbE Family Controller. Ver 1.00.0037 For Windows 10):</a>
+                                </h2>
+                                <h2 style="font-size: 30px;">
+                                    <b>USB 3.0 drivers</b><span></span>
+                                </h2>
+                                <h2 style="font-size: 20px;">
+                                    <a href="https://drive.google.com/uc?export=download&id=1NzyNgEuhFvGm4ZdWM4SxS-PHUKPKxlUz" style="width: 100%; display: inline-block;">Intel® USB 3.0 eXtensible Host Controller Driver ((5.0.4.43). Version for Win 7\Win Server 2008.):</a>
+                                </h2>
+                                <h2 style="font-size: 30px;">
+                                    <b>Intel Rapid Storage Drivers</b><span></span>
+                                </h2>
+                                <h2 style="font-size: 20px;">
+                                    <a href="https://drive.google.com/uc?export=download&id=1NzyNgEuhFvGm4ZdWM4SxS-PHUKPKxlUz" style="width: 100%; display: inline-block;">Includes SATA AHCI and RAID drivers</a>
+                                </h2>
+                                
+                        </div>
+                    </div>
+        </div>
+</section>
+<!-- End of Portfolio Section -->	<!-- Client Section -->
+<section id="client" class="overlay bg-fixed" style="background-image: url(img/bg.jpg);">
+    <div class="container">
+        <div class="section-content" data-aos="fade-up">
+            <div class="row ">
+                <div class="col-md-12">
+                    <!-- Section Title -->
+                    <div class="title-wrap mb-5">
+                        <h2>Who love to <span> work</span> with us</h2>
+                        <h2>Used icons:
+                            <a href="https://www.flaticon.com/ru/free-icons/" title="видеокарта иконки">prettycons - Flaticon</a>
+                            <a href="https://www.flaticon.com/ru/free-icons/-" title="Оперативная память иконки">surang - Flaticon</a>
+                            <a href="https://www.flaticon.com/ru/free-icons/-" title="материнская плата иконки"> kerismaker - Flaticon</a>
+                            <a href="https://www.flaticon.com/ru/free-icons/ssd-" title="ssd карта иконки">Souayang - Flaticon</a>
+                            <a href="https://www.flaticon.com/ru/free-icons/-" title="блок питания иконки">Ahmad Roaayala - Flaticon</a>
+                        </h2>
+                    </div>
+                    <!-- End of Section Title -->
+</footer>	<!-- External JS -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+	<script src="vendor/bootstrap/popper.min.js"></script>
+	<script src="vendor/bootstrap/bootstrap.min.js"></script>
+	<script src="vendor/select2/select2.min.js "></script>
+	<script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+	<script src="vendor/stellar/jquery.stellar.js" type="text/javascript" charset="utf-8"></script>
+	<script src="vendor/isotope/isotope.min.js"></script>
+	<script src="vendor/lightcase/lightcase.js"></script>
+	<script src="vendor/waypoints/waypoint.min.js"></script>
+	 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	 
+	<!-- Main JS -->
+	<script src="js/app.min.js "></script>
+	<script src="//localhost:35729/livereload.js"></script>
+</body>
+</html>
