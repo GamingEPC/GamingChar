@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
 
 <head>
     <link rel="icon" sizes="512x512" href="https://cdn.icon-icons.com/icons2/1525/PNG/512/976598-appliances-case-computer-computer-tower-desktop-pc_106551.png">
@@ -38,8 +38,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
 </head>
+
+
 <style>
-    button.primary-buttons {
+    button.primary-button {
  --glow-color: rgb(217, 176, 255);
  --glow-spread-color: rgba(191, 123, 255, 0.781);
  --enhanced-glow-color: rgb(231, 206, 255);
@@ -60,7 +62,7 @@
  transition: all 0.3s;
 }
 
-button.primary-buttons::after {
+button.primary-button::after {
  pointer-events: none;
  content: "";
  position: absolute;
@@ -74,7 +76,7 @@ button.primary-buttons::after {
  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
 }
 
-button.primary-buttons:hover {
+button.primary-button:hover {
  color: var(--btn-color);
  background-color: var(--glow-color);
  box-shadow: 0 0 1em .25em var(--glow-color),
@@ -82,7 +84,7 @@ button.primary-buttons:hover {
         inset 0 0 .75em .25em var(--glow-color);
 }
 
-button.primary-buttons:active {
+button.primary-button:active {
  box-shadow: 0 0 0.6em .25em var(--glow-color),
         0 0 2.5em 2em var(--glow-spread-color),
         inset 0 0 .5em .25em var(--glow-color);
@@ -91,82 +93,6 @@ button.my-buttons {
   /* Стили для кнопки */
   margin-top: 100px; /* Задаем отступ сверху */
 }
-</style>
-<body data-spy="scroll" data-target="#navbar" class="static-layout">
-    <nav id="header-navbar" class="navbar navbar-expand-lg py-4 fixed-top hide-on-mobile">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center text-white" href="/">
-                <h3 class="font-weight-bolder mb-0"></h3>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header" aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="lnr lnr-menu"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-nav-header">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#drivers"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html"></a>
-                    </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog.html"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html"></a>
-                </li>
-                <button class="my-buttons primary-buttons" onclick="window.location.href='index.ua.html'">UA</button>
-            </ul>
-        </div>
-    </div>
-</nav>
-<div id="side-nav" class="sidenav">
-	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
-	
-	<div class="sidenav-content">
-	</div>
-</div><div id="side-search" class="sidenav">
-	<a href="javascript:void(0)" id="side-search-close">&times;</a>
-	<div class="sidenav-content">
-		<form action="">
-
-			<div class="input-group md-form form-sm form-2 pl-0">
-			  <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
-			  <div class="input-group-append">
-			    <button class="input-group-text red lighten-3" id="basic-text1">
-			    	<span class="lnr lnr-magnifier"></span>
-			    </button>
-			  </div>
-			</div>
-		</form>
-	</div>
-</div>	
-<div class="jumbotron d-flex align-items-center">
-    <style>
-/* Скрыть элементы на мобильных устройствах */
-@media (max-width: 768px) {
-    .hide-on-mobile {
-        display: none;
-    }
-}
-
-
-/* Показать элементы только на мобильных устройствах */
-
-    .navbar {
-    padding-top: 5px; /* Уменьшение верхнего отступа для мобильных */
-    padding-bottom: 5px; /* Уменьшение нижнего отступа для мобильных */
-    height: 50px; /* Уменьшение высоты для мобильных */
-  }
-
-  .navbar-brand {
-    font-size: 20px; /* Уменьшение размера текста в бренде для мобильных */
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 14px; /* Уменьшение размера текста в ссылках навигации для мобильных */
-  }
-/* Скрыть кнопки на десктопной версии */
 button.alternative.triple-buttons {
   --border-radius: 4px;
   --border-width: 1px;
@@ -249,7 +175,93 @@ button.alternative.triple-buttons::after {
 button.alternative.triple-buttons:active {
   --border-width: 5px;
 }
+</style>
+<body data-spy="scroll" data-target="#navbar" class="static-layout">
+    <nav id="header-navbar" class="navbar navbar-expand-lg py-4 fixed-top hide-on-mobile">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-white" href="/">
+                <h3 class="font-weight-bolder mb-0"></h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header" aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="lnr lnr-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-nav-header">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#drivers"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"></a>
+                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"></a>
+                </li>
+                <button class="my-buttons primary-button" onclick="window.location.href='index.html'">EN</button>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="side-nav" class="sidenav">
+	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
+	
+	<div class="sidenav-content">
+	</div>
+</div><div id="side-search" class="sidenav">
+	<a href="javascript:void(0)" id="side-search-close">&times;</a>
+	<div class="sidenav-content">
+		<form action="">
+			<div class="input-group md-form form-sm form-2 pl-0">
+			  <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
+			  <div class="input-group-append">
+			    <button class="input-group-text red lighten-3" id="basic-text1">
+			    	<span class="lnr lnr-magnifier"></span>
+			    </button>
+			  </div>
+			</div>
 
+		</form>
+	</div>
+	
+</div>	
+<div class="jumbotron d-flex align-items-center">
+    <style>
+
+/* Скрыть элементы на мобильных устройствах */
+@media (max-width: 768px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
+
+/* Показать элементы только на мобильных устройствах */
+
+    .navbar {
+    padding-top: 5px; /* Уменьшение верхнего отступа для мобильных */
+    padding-bottom: 5px; /* Уменьшение нижнего отступа для мобильных */
+    height: 50px; /* Уменьшение высоты для мобильных */
+  }
+
+  .navbar-brand {
+    font-size: 20px; /* Уменьшение размера текста в бренде для мобильных */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px; /* Уменьшение размера текста в ссылках навигации для мобильных */
+  }
+/* Скрыть кнопки на десктопной версии */
+
+.alternative-button {
+    font-size: 17px;
+    padding: 2px 2px;
+}
+
+.alternative-button {
+    color: white;
+}
 
         .animated-image {
         animation: moveUpDown 15s infinite;
@@ -267,9 +279,9 @@ button.alternative.triple-buttons:active {
             }
         }
     </style>
-    <div class="container text-center">
-        <button class="alternative triple-buttons" onclick="window.location.href='#drivers'">Drivers and Software</button>
-        <button class="alternative triple-buttons" onclick="window.location.href='about.html'">Technical Specification</button>
+    <div class="container text-center fixed-top">
+        <button class="alternative triple-buttons" onclick="window.location.href='#drivers'">Драйвера та Програми</button>
+        <button class="alternative triple-buttons" onclick="window.location.href='about.ua.html'">Технічні Характеристики</button>
         <h2 id="rainbow-text">
           <span>G</span><span>a</span><span>m</span><span>i</span><span>n</span><span>g</span>
           <span>C</span><span>h</span><span>a</span><span>r</span>
@@ -404,7 +416,7 @@ button.alternative.triple-buttons:active {
             </div>        
                 <div class="heading-section text-center">
                     <h2 id="TEXT2">
-                        Stylish and powerful gaming PC that will let you experience the full power of FULL HD
+                        Стильний та потужний ігровий ПК, який дасть вам відчути всю гру в FULL HD
                     </h2>
                 </div>
                 <div class="row">
@@ -476,7 +488,7 @@ button.alternative.triple-buttons:active {
                                     <img src="Motherboard ico.png" alt="Image" class="picture" style="width: 60px;" style="height: 60px;">
                                 </div>
                                 <h4>Machinist X99-RS9</h4>
-                                <p>Power unleashed on a single motherboard!</p>
+                                <p>Вся сила на одній материнскій платі!</p>
                                 <img src="Motherboard.png" alt="Image" class="picture" style="width: 200px;" style="height: 200px;">
                             </div>
                             <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
@@ -484,8 +496,8 @@ button.alternative.triple-buttons:active {
                                     <img src="CPU ico.png" alt="Image" class="picture" style="width: 60px;" style="height: 60px;">
                                 </div>
                                 <h4>Intel® Xeon® E5 2670 v3</h4>
-                                <p>3.1 Ghz - 12 Cores/24 Theards</p>
-                                <img src="Xeon 2670V3.png" alt="Image" class="picture" style="width: 150px;" style="height: 150px;">
+                                <p>3.1 Ггц - 12 Ядер/24 Потоків</p>
+                                <img src="Xeon 2670V3.png" alt="Image" class="picture" style="width: 123px;" style="height: 123px;" >
                             </div>
                         </div>
                         <!-- End of Feature Item -->
@@ -496,8 +508,8 @@ button.alternative.triple-buttons:active {
                                     <img src="RAM ico.png" alt="Image" class="picture" style="width: 60px;" style="height: 60px;">
                                 </div>
                                 <h4>MACHINIST DDR4 RAM</h4>
-                                <p>32 gigabytes of gaming RAM
-                                    2666Mhz-16GB * 2PCS</p>
+                                <b>32 гігабайта ігрової пам'яті
+                                    2666Мгц-16GB * 2PCS</b>
                                 <img src="DDR4 RAM.png" alt="Image" class="picture" style="width: 90px;" style="height: 90px;">
                             </div>
                             <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
@@ -505,7 +517,7 @@ button.alternative.triple-buttons:active {
                                     <img src="PWU ico.png" alt="Image" class="picture" style="width: 60px;" style="height: 60px;">
                                 </div>
                                 <h4>Vinga 500W-APFC</h4>
-                                <p>Powerful and reliable 500 Watt power supply unit</p>
+                                <b>Потужний і надійний блок живлення на 500 Вт</b>
                                 <img src="PWU.png" alt="Image" class="picture" style="width: 170px;" style="height: 170px;">
                             </div>
                         </div>
@@ -517,15 +529,15 @@ button.alternative.triple-buttons:active {
                                     <img src="SSD Ico.png" alt="Image" class="picture" style="width: 60px;" style="height: 60px;">
                                 </div>
                                 <h4>SSD NVME 512GB</h4>
-                                <p>High-speed NVMe SSD storage with 2100MB/s read and 1800MB/s write speeds.</p>
-                                <img src="SSD.png" alt="Image" class="picture" style="width: 400px;" style="height: 400px;">
+                                <b>Високошвидкісний накопичувач зі швидкістю на читання 2100 МБ/с та запису 1800 МБ/с</b>
+                                <img src="SSD.png" alt="Image" class="picture" style="width: 500px;" style="height: 500px;">
                             </div>
                             <div class="shadow rounded feature-item p-4 mb-4" data-aos="fade-up">
                                 <div class="my-5">
                                     <img src="RX6600M Ico.png" alt="Image" class="picture" style="width: 60px;" style="height: 60px;">
                                 </div>
                                 <h4>Graphics card PCI-E 4.0 RX6600M</h4>
-                                <p>Gaming-grade graphics card RX6600M PCI-E 4.0 x8 (100W TDP) with 8GB GDDR6</p>
+                                <b>Відеокарта ігрового рівня RX6600M PCI-E 4.0 x8 (100 Вт TDP) з 8 ГБ GDDR6</b>
                                 <img src="RX6600M.jpg" alt="Image" class="picture" style="width: 300px;" style="height: 300px;">
                             </div>
                         </div>                        
@@ -554,8 +566,8 @@ button.alternative.triple-buttons:active {
             <div class="overlay-bg"></div>
             <!-- Section Title -->
             <div class="title-wrap">
-                <h2 class="section-title" style="position: relative; z-index: 2;"><b>Cooling System</b></h2>
-                <p class="section-sub-title" style="position: relative; z-index: 2; font-size: 24px;">Efficient and Silent Cooling for Your PC</p>
+                <h2 class="section-title" style="position: relative; z-index: 2;"><b>Система охолодження</b></h2>
+                <p class="section-sub-title" style="position: relative; z-index: 2; font-size: 24px;">Ефективне та тихе охолодження вашого ПК</p>
             </div>
             <!-- End of Section Title -->
             <div class="row">
@@ -632,8 +644,8 @@ button.alternative.triple-buttons:active {
                     <div class="row align-items-center text-white">
 
                         <div class="col-md-4 offset-md-2 col-sm-6" data-aos="fade-right">
-                            <h4 class="mb-4">Gaming performance tests</h4>
-                            <p> In this video, you will be able to watch and see for yourself that this setup is perfectly suited for all demanding tasks as well as gaming at a resolution of 1920x1080. It provides smooth FPS and fast gameplay performance.</p>
+                            <h4 class="mb-4">Ігрові тести на продуктивність</h4>
+                            <p> У цьому відео ви зможете на власні очі побачити, що цей ПК ідеально підходить для всіх складних завдань, а також для ігор з роздільною здатністю 1920x1080. Він забезпечує плавний FPS та швидку ігрову продуктивність.</p>
                         </div>
                         <!--/ .col-md-4.col-md-offset-2.col-sm-6 -->
 
@@ -700,7 +712,7 @@ button.alternative.triple-buttons:active {
                         <div class="title-wrap mb-5">
                             <h2 id="DRV">
                                         <b>
-                                            <span class="rainbow-text">Drivers and Software</span>
+                                            <span class="rainbow-text">Драйвера та Програми</span>
                                         </b>
                                         <span>
                                         </span>
@@ -754,18 +766,18 @@ button.alternative.triple-buttons:active {
                                       </style>
 
                             <h2 style="font-size: 35px;">
-                                <b>Chipset</b>
+                                <b>Чіпсет</b>
                             </h2>
                                 <h2 style="font-size: 20px;">
-                                    <button class="my-button secondary-buttons" onclick="window.location.href='https://drive.google.com/uc?export=download&id=13s7D4xwr-Txrhfa6Ku0CCzwE_lSh2866'" style="width: 35%; display: inline-block;">
-                                        Chipset drivers (Win10/WinServer)
+                                    <button class="my-button secondary-button" onclick="window.location.href='https://drive.google.com/uc?export=download&id=13s7D4xwr-Txrhfa6Ku0CCzwE_lSh2866'" style="width: 35%; display: inline-block;">
+                                        Драйвера до Чіпсету (Win10/WinServer)
                                     </button>
                                     </h2>
                                 <h2 style="font-size: 35px;">
-                                    <b>Realtek Audio Drivers</b><span></span>
+                                    <b>Realtek Аудіо драйвера</b><span></span>
                                 </h2>
                                 <style>
-  button.secondary-buttons {
+  button.secondary-button {
   text-decoration: none;
   position: relative;
   border: none;
@@ -782,7 +794,7 @@ button.alternative.triple-buttons:active {
   z-index: 1;
 }
 
-button.secondary-buttons:hover {
+button.secondary-button:hover {
   animation: ani 8s linear infinite;
   border: none;
 }
@@ -797,7 +809,7 @@ button.secondary-buttons:hover {
   }
 }
 
-button.secondary-buttons:before {
+button.secondary-button:before {
   content: '';
   position: absolute;
   top: -5px;
@@ -811,55 +823,55 @@ button.secondary-buttons:before {
   transition: 1s;
 }
 
-button.secondary-buttons:hover::before {
+button.secondary-button:hover::before {
   filter: blur(20px);
 }
 
-button.secondary-buttons:active {
+button.secondary-button:active {
   background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
-} 
+}   
                                 </style>
                                 <h2 style="font-size: 20px; display: flex; justify-content: space-between;">
-                                    <button class="my-button secondary-buttons" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1GxOQ3FOzIkIUmMd5uSTnPhHwCTugb53y'" style="width: 31%;">
+                                    <button class="my-button secondary-button" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1GxOQ3FOzIkIUmMd5uSTnPhHwCTugb53y'" style="width: 31%;">
                                         Audio Drivers R2.81 X64-bit (Win7/Win8/Win10)
                                     </button>
-                                    <button class="my-button secondary-buttons" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1wLjgCjf1VDUcMnuVB4l1Keyv0Jsr-3Ci'" style="width: 31%;">
+                                    <button class="my-button secondary-button" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1wLjgCjf1VDUcMnuVB4l1Keyv0Jsr-3Ci'" style="width: 31%;">
                                         Audio Drivers R2.81 X32-bit (Win7/Win8/Win10)
                                     </button>
-                                    <button class="my-button secondary-buttons" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1tjZNnL-j8NNwKGt2HGpoJ__mWPRW6n5H'" style="width: 31%;">
-                                    Audio Drivers R2.76 X64-bit (Win7/Win8/Win10)
+                                    <button class="my-button secondary-button" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1tjZNnL-j8NNwKGt2HGpoJ__mWPRW6n5H'" style="width: 31%;">
+                                        Audio Drivers R2.76 X64-bit (Win7/Win8/Win10)
                                     </button>
                                     </h2>
                                 <h2 style="font-size: 35px;">
-                                    <b>Realtek Network Drivers</b><span></span>
+                                    <b>Realtek Драйвера до Мережі</b><span></span>
                                 </h2>
                                 <h2 style="font-size: 20px;">
-                                 <button class="my-button secondary-buttons" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1Ok2qgy6dzVoEgU80NakfZYVPFaetej6c'" style="width: 35%; display: inline-block;">
+                                 <button class="my-button secondary-button" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1Ok2qgy6dzVoEgU80NakfZYVPFaetej6c'" style="width: 35%; display: inline-block;">
                                     Network drivers (Win10)
                                 </button>
                                 </h2>
                                 <h2 style="font-size: 35px;">
-                                    <b>USB 3.0 drivers</b><span></span>
+                                    <b>USB 3.0 Драйвера</b><span></span>
                                 </h2>
                                 <h2 style="font-size: 20px;">
-                                    <button class="my-button secondary-buttons" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1NzyNgEuhFvGm4ZdWM4SxS-PHUKPKxlUz'" style="width: 40%; display: inline-block;">
+                                    <button class="my-button secondary-button" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1NzyNgEuhFvGm4ZdWM4SxS-PHUKPKxlUz'" style="width: 40%; display: inline-block;">
                                     Intel® USB 3.0 eXtensible Host Controller Driver (Win7/Win10)
                                     </button>
                                     </h2>
                                 <h2 style="font-size: 35px;">
-                                    <b>Intel Rapid Storage Drivers</b><span></span>
+                                    <b>Драйвера до контроллеру SATA</b><span></span>
                                 </h2>
                                 <h2 style="font-size: 20px;">
-                                    <button class="my-button secondary-buttons" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1NzyNgEuhFvGm4ZdWM4SxS-PHUKPKxlUz'" style="width: 35%; display: inline-block;">
+                                    <button class="my-button secondary-button" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1NzyNgEuhFvGm4ZdWM4SxS-PHUKPKxlUz'" style="width: 35%; display: inline-block;">
                                         Includes SATA AHCI and RAID drivers (Win7/Win10)
                                     </button>
                                     </h2> 
                                 <h2 style="font-size: 35px;">
-                                    <b>Graphics card drivers</b><span></span>
+                                    <b>Драйвера до відеокарти</b><span></span>
                                 </h2>
                                 <h2 style="font-size: 20px;">
-                                    <button class="my-button secondary-buttons" onclick="window.location.href='https://www.amd.com/en/support/graphics/amd-radeon-6000m-series/amd-radeon-rx-6000m-series/amd-radeon-rx-6600m'" style="width: 35%; display: inline-block;">
-                                        Latest official AMD RX 6660M drivers (Win10/Win11)
+                                    <button class="my-button secondary-button" onclick="window.location.href='https://www.amd.com/en/support/graphics/amd-radeon-6000m-series/amd-radeon-rx-6000m-series/amd-radeon-rx-6600m'" style="width: 35%; display: inline-block;">
+                                        Останні драйвера до AMD RX 6660M drivers
                                     </button>
                                     </h2> 
                         </div>
@@ -874,8 +886,8 @@ button.secondary-buttons:active {
                 <div class="col-md-12">
                     <!-- Section Title -->
                     <div class="title-wrap mb-5">
-                        <h2>All privacy used conten</h2>
-                        <h2>Used icons:
+                        <h2>Приватний контент який використовувався</h2>
+                        <h2>Використані іконки:
                             <a href="https://www.flaticon.com/ru/free-icons/" title="видеокарта иконки">prettycons - Flaticon</a>
                             <a href="https://www.flaticon.com/ru/free-icons/-" title="Оперативная память иконки">surang - Flaticon</a>
                             <a href="https://www.flaticon.com/ru/free-icons/-" title="материнская плата иконки"> kerismaker - Flaticon</a>
