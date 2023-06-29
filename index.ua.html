@@ -41,139 +41,172 @@
 
 
 <style>
-    button.primary-button {
- --glow-color: rgb(217, 176, 255);
- --glow-spread-color: rgba(191, 123, 255, 0.781);
- --enhanced-glow-color: rgb(231, 206, 255);
- --btn-color: rgb(100, 61, 136);
- border: .25em solid var(--glow-color);
- padding: 1em 3em;
- color: var(--glow-color);
- font-size: 15px;
- font-weight: bold;
- background-color: var(--btn-color);
- border-radius: 1em;
- outline: none;
- box-shadow: 0 0 1em .25em var(--glow-color),
-        0 0 4em 1em var(--glow-spread-color),
-        inset 0 0 .75em .25em var(--glow-color);
- text-shadow: 0 0 .5em var(--glow-color);
- position: relative;
- transition: all 0.3s;
+    .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 3rem;
+  background-size: 300% 300%;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
 }
 
-button.primary-button::after {
- pointer-events: none;
- content: "";
- position: absolute;
- top: 120%;
- left: 0;
- height: 100%;
- width: 100%;
- background-color: var(--glow-spread-color);
- filter: blur(2em);
- opacity: .7;
- transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
-}
-
-button.primary-button:hover {
- color: var(--btn-color);
- background-color: var(--glow-color);
- box-shadow: 0 0 1em .25em var(--glow-color),
-        0 0 4em 2em var(--glow-spread-color),
-        inset 0 0 .75em .25em var(--glow-color);
-}
-
-button.primary-button:active {
- box-shadow: 0 0 0.6em .25em var(--glow-color),
-        0 0 2.5em 2em var(--glow-spread-color),
-        inset 0 0 .5em .25em var(--glow-color);
-}
-button.my-buttons {
-  /* Стили для кнопки */
-  margin-top: 100px; /* Задаем отступ сверху */
-}
-button.alternative.triple-buttons {
-  --border-radius: 4px;
-  --border-width: 1px;
-  appearance: none;
-  position: relative;
-  padding: 0.1em 0.1em; /* Уменьшенные отступы внутри кнопок */
-  border: 0;
-  background-color: #212121;
-  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
-  font-size: 1px; /* Уменьшенный размер шрифта */
-  font-weight: 1;
-  color: #fff;
-  z-index: 2;
-  margin-top: 50px;
-  margin-left: 20px;
-}
-button.alternative.triple-buttons {
-  --border-radius: 3px;
-  --border-width: 2px;
-  appearance: none;
-  position: relative;
-  padding: 0.5em 1em;
-  border: 0;
-  background-color: transparent;
-  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  color: #fff;
-  z-index: 2;
-}
-
-button.alternative.triple-buttons::after {
-  --m-i: linear-gradient(#000, #000);
-  --m-o: content-box, padding-box;
-  content: "";
+#container-stars {
   position: absolute;
-  left: 0;
-  top: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  padding: var(--border-width);
-  border-radius: var(--border-radius);
-  background-image: conic-gradient(
-    #488cfb,
-    #29dbbc,
-    #ddf505,
-    #ff9f0e,
-    #e440bb,
-    #655adc,
-    #488cfb
-  );
-  -webkit-mask-image: linear-gradient(#000, #000), linear-gradient(#000, #000);
-  mask-image: linear-gradient(#000, #000), linear-gradient(#000, #000);
-  -webkit-mask-origin: content-box, padding-box;
-  mask-origin: content-box, padding-box;
-  -webkit-mask-clip: content-box, padding-box;
-  mask-clip: content-box, padding-box;
-  mask-composite: exclude;
-  -webkit-mask-composite: destination-out;
-  filter: hue-rotate(0);
-  animation: rotate-hue linear 500ms infinite;
-  animation-play-state: paused;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
 }
 
-button.alternative.triple-buttons:hover::after {
-  animation-play-state: running;
+strong {
+  z-index: 2;
+  font-family: 'Avalors Personal Use';
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #FFFFFF;
+  text-shadow: 0 0 4px white;
 }
 
-@keyframes rotate-hue {
+#glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+
+.circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  z-index: -1;
+}
+
+.circle:nth-of-type(1) {
+  background: rgba(254, 83, 186, 0.636);
+}
+
+.circle:nth-of-type(2) {
+  background: rgba(142, 81, 234, 0.704);
+}
+
+.btn:hover #container-stars {
+  z-index: 1;
+  background-color: #212121;
+}
+
+.btn:hover {
+  transform: scale(1.1)
+}
+
+.btn:active {
+  border: double 4px #FE53BB;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+}
+
+.btn:active .circle {
+  background: #FE53BB;
+}
+
+#stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+#stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 90s linear infinite;
+}
+
+#stars::after {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+#stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 60s linear infinite;
+}
+
+#stars::before {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+
   to {
-    filter: hue-rotate(1turn);
+    transform: translateY(-135rem);
   }
 }
 
-button.alternative.triple-buttons,
-button.alternative.triple-buttons::after {
-  box-sizing: border-box;
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
 }
 
-button.alternative.triple-buttons:active {
-  --border-width: 5px;
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }
 </style>
 <body data-spy="scroll" data-target="#navbar" class="static-layout">
@@ -188,10 +221,10 @@ button.alternative.triple-buttons:active {
             <div class="collapse navbar-collapse" id="navbar-nav-header">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#drivers"></a>
+                        <a class="nav-link" href="#drivers">Драйвера та Програми</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html"></a>
+                        <a class="nav-link" href="about.html">Технічні Характеристики</a>
                     </li>
                 <li class="nav-item">
                     <a class="nav-link" href="blog.html"></a>
@@ -199,7 +232,20 @@ button.alternative.triple-buttons:active {
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html"></a>
                 </li>
-                <button class="my-buttons primary-button" onclick="window.location.href='index.html'">EN</button>
+                <div style="display: flex; justify-content: flex-end;">
+                    <button class="btn" onclick="window.location.href='index.html'" type="button">
+                      <strong>EN</strong>
+                      <div id="container-stars">
+                        <div id="stars"></div>
+                      </div>
+                    </button>
+                  </div>
+                  
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>
             </ul>
         </div>
     </div>
@@ -229,12 +275,6 @@ button.alternative.triple-buttons:active {
     <style>
 
 /* Скрыть элементы на мобильных устройствах */
-@media ( max-width: 400px) {
-    .hide-on-mobile {
-        display: none;
-    }
-}
-
 @media (max-width: 400x) {
   /* Стили для кнопок на мобильных устройствах */
   .button-container {
@@ -268,19 +308,6 @@ button.alternative.triple-buttons:active {
 }
 /* Показать элементы только на мобильных устройствах */
 
-    .navbar {
-    padding-top: 5px; /* Уменьшение верхнего отступа для мобильных */
-    padding-bottom: 5px; /* Уменьшение нижнего отступа для мобильных */
-    height: 50px; /* Уменьшение высоты для мобильных */
-  }
-
-  .navbar-brand {
-    font-size: 20px; /* Уменьшение размера текста в бренде для мобильных */
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 14px; /* Уменьшение размера текста в ссылках навигации для мобильных */
-  }
 /* Скрыть кнопки на десктопной версии */
 
 .alternative-button {
@@ -310,8 +337,6 @@ button.alternative.triple-buttons:active {
         
     </style>
     <div class="container text-center fixed-top">
-        <button class="alternative triple-buttons" onclick="window.location.href='#drivers'">Драйвера та Програми</button>
-        <button class="alternative triple-buttons" onclick="window.location.href='about.ua.html'">Технічні Характеристики</button>
         <h2 id="rainbow-text">
           <span>G</span><span>a</span><span>m</span><span>i</span><span>n</span><span>g</span>
           <span>C</span><span>h</span><span>a</span><span>r</span>
@@ -329,7 +354,7 @@ button.alternative.triple-buttons:active {
 }
 
 /* Медиа-запрос для мобильных устройств */
-@media (max-width: 1000px) {
+@media (max-width: 767px) {
   /* Стили для мобильной версии */
   .animated-image {
     width: 420px; /* Новое разрешение для мобильной версии */
@@ -793,7 +818,7 @@ height: 1300px;">
                                     <style>
                                         @media only screen and (max-width: 767px) {
                                         .mobile-next {
-                                         font-size: 19.1px; /* Задайте желаемый размер шрифта для мобильных устройств */
+                                         font-size: 18px; /* Задайте желаемый размер шрифта для мобильных устройств */
                                         }
                                         }
                                         #drivers {
@@ -870,7 +895,7 @@ height: 1300px;">
                                       </style>                                      
                                     </h2>
                                 <h2 style="font-size: 30px;">
-                                    <b>Realtek Аудіо драйвера</b><span></span>
+                                    <b>Realtek Аудіо драйвера</b>
                                 </h2>
                                 <style>
   button.secondary-button {
@@ -928,14 +953,14 @@ button.secondary-button:active {
 }   
                                 </style>
                                 <h2 style="font-size: 20px; display: flex; justify-content: space-between;">
-                                    <button class="my-button secondary-button" style="width: 50%; height: 35%; margin-right: 15px;">
-                                      <span class="mobile-text">Audio Drivers R2.81 X64-bit (Win7/Win10)</span>
+                                    <button class="my-button secondary-button" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1GxOQ3FOzIkIUmMd5uSTnPhHwCTugb53y'" style="width: 50%; height: 50%; margin-right: 15px;">
+                                      <span class="mobile-text">Аудіо драйвера R2.81 X64 (Win7/Win10)</span>
                                     </button>
-                                    <button class="my-button secondary-button" style="width: 50%; height: 35%; margin-right: 15px;">
-                                      <span class="mobile-text">Audio Drivers R2.81 X32-bit (Win7/Win10)</span>
+                                    <button class="my-button secondary-button" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1wLjgCjf1VDUcMnuVB4l1Keyv0Jsr-3Ci'" style="width: 50%; height: 50%; margin-right: 15px;">
+                                      <span class="mobile-text">Аудіо драйвера R2.81 X32 (Win7/Win10)</span>
                                     </button>
-                                    <button class="my-button secondary-button" style="width: 50%; height: 35%; margin-right: 15px;">
-                                      <span class="mobile-text">Audio Drivers R2.76 (Win7/Win10)</span>
+                                    <button class="my-button secondary-button" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1tjZNnL-j8NNwKGt2HGpoJ__mWPRW6n5H'" style="width: 50%; height: 50%; margin-right: 15px;">
+                                      <span class="mobile-text">Аудіо драйвера R2.76 X64 (Win7/Win10)</span>
                                     </button>
                                   </h2>                                  
                                     <h2 class="mobile-heading" style="font-size: 25px;">
@@ -952,7 +977,7 @@ button.secondary-button:active {
                                       
                                 <h2 style="font-size: 20px;">
                                  <button class="my-button secondary-button" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1Ok2qgy6dzVoEgU80NakfZYVPFaetej6c'" style="width: 50%; height: 35%; display: inline-block;">
-                                    <span>Network drivers (Win10)</span>
+                                    <span>Мережові драйвера (Win10)</span>
                                 </button>
                                 </h2>
                                 <h2 style="font-size: 30px;">
@@ -960,7 +985,7 @@ button.secondary-button:active {
                                 </h2>
                                 <h2 style="font-size: 20px;">
                                     <button class="my-button secondary-button" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1NzyNgEuhFvGm4ZdWM4SxS-PHUKPKxlUz'" style="width: 50%; height: 40%; display: inline-block;">
-                                        <span>Intel® USB 3.0 Driver (Win7/Win10)</span>
+                                        <span>Intel® USB 3.0 драйвер (Win7/Win10)</span>
                                     </button>
                                     </h2>
                                 <h2 style="font-size: 30px;">
@@ -968,7 +993,7 @@ button.secondary-button:active {
                                 </h2>
                                 <h2 style="font-size: 20px;">
                                     <button class="my-button secondary-button" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1NzyNgEuhFvGm4ZdWM4SxS-PHUKPKxlUz'" style="width: 50%; height: 40%; display: inline-block;">
-                                        Includes SATA AHCI and RAID drivers (Win7/Win10)
+                                         SATA AHCI та RAID драйвера (Win7/Win10)
                                     </button>
                                     </h2> 
                                 <h2 style="font-size: 30px;">
@@ -976,10 +1001,9 @@ button.secondary-button:active {
                                 </h2>
                                 <h2 style="font-size: 20px;">
                                     <button class="my-button secondary-button" onclick="window.location.href='https://www.amd.com/en/support/graphics/amd-radeon-6000m-series/amd-radeon-rx-6000m-series/amd-radeon-rx-6600m'" style="width: 60%; height: 40%; display: inline-block;">
-                                        Останні драйвера до AMD RX 6660M drivers
+                                        Останні драйвера до AMD RX 6660M
                                     </button>
                                     </h2> 
-                        </div>
                     </div>
         </div>
             </div>
